@@ -36,7 +36,7 @@ function setup() {
 
   level = new WorldLevel(worldData);
 
-  const start = worldData.playerStart ?? { x: 300, y: 300, speed: 3 };
+  const start = worldData.playerStart ?? { x: 300, y: 300, speed: 0.001 };
   player = new Player(start.x, start.y, start.speed);
 
   camX = player.x - width / 2;
@@ -51,19 +51,32 @@ function draw() {
   player.y = constrain(player.y, 0, level.h);
 
   // Target camera (center on player)
-  let targetX = player.x - width / 2;
-  let targetY = player.y - height / 2;
+  // --- Camera target (player-centered) ---
+let targetX = player.x - width / 2;
+let targetY = player.y - height / 2 + 80;
 
-  // Clamp target camera safely
-  const maxCamX = max(0, level.w - width);
-  const maxCamY = max(0, level.h - height);
-  targetX = constrain(targetX, 0, maxCamX);
-  targetY = constrain(targetY, 0, maxCamY);
 
-  // Smooth follow using the JSON knob
-  const camLerp = level.camLerp; // ← data-driven now
-  camX = lerp(camX, targetX, camLerp);
-  camY = lerp(camY, targetY, camLerp);
+// --- Clamp camera inside world ---
+const maxCamX = max(0, level.w - width);
+const maxCamY = max(0, level.h - height);
+targetX = constrain(targetX, 0, maxCamX);
+targetY = constrain(targetY, 0, maxCamY);
+
+// --- Smooth follow using lerp ---
+camX = lerp(camX, targetX, level.camLerp);
+camY = lerp(camY, targetY, level.camLerp);
+
+// --- BREATHING effect ---
+const breathX = sin(frameCount * level.camBreathSpeed);
+const breathY = cos(frameCount * level.camBreathSpeed);
+
+const noiseOffset = frameCount * level.camNoiseSpeed;
+const noiseX = (noise(noiseOffset) - 0.5) * level.camNoiseAmp;
+const noiseY = (noise(noiseOffset + 1000) - 0.5) * level.camNoiseAmp;
+
+// --- Apply meditative offsets ---
+camX += breathX + noiseX;
+camY += breathY + noiseY;
 
   level.drawBackground();
 
@@ -78,7 +91,7 @@ function draw() {
 
 function keyPressed() {
   if (key === "r" || key === "R") {
-    const start = worldData.playerStart ?? { x: 300, y: 300, speed: 3 };
+    const start = worldData.playerStart ?? { x: 300, y: 300, speed: 0.001};
     player = new Player(start.x, start.y, start.speed);
   }
 }

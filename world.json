@@ -3,11 +3,19 @@
   "world": {
     "w": 2400,
     "h": 1600,
-    "bg": [235, 235, 235],
+    "bg": [140, 255, 219],
     "gridStep": 160
   },
   "camera": {
-    "lerp": 0.12
+    
+  "lerp": 0.05,      
+  "breathSpeed": 0.01,  
+  "noiseAmp": 3,        
+  "noiseSpeed": 0.002,
+  
+  "zoomAmp": 0.02,      
+  "zoomSpeed": 0.001    
+
   },
   "playerStart": {
     "x": 300,

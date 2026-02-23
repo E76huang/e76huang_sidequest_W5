@@ -2,7 +2,7 @@ class Player {
   constructor(x, y, speed) {
     this.x = x;
     this.y = y;
-    this.s = speed ?? 3;
+    this.s = speed ?? 0.001;
   }
 
   updateInput() {
