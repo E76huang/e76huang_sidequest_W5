@@ -8,9 +8,9 @@ Side Quest Week 5: Data-Driven World with Smooth Meditative Camera
 
 This project adds a new meditative camera expereince to the orignal Example 4 lerp code. 
 
->Camera follows the player smoothly using lerp
->New "Breathing effect" adds gentle a calm emotion, reflective motion. 
->Several different pastel shapes are pasted around the world map for players to find. 
+> Camera follows the player smoothly using lerp
+> New "Breathing effect" adds gentle a calm emotion, reflective motion. 
+> Several different pastel shapes are pasted around the world map for players to find. 
 
 ---
 
