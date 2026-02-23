@@ -51,7 +51,6 @@ function draw() {
   player.y = constrain(player.y, 0, level.h);
 
   // Target camera (center on player)
-  // --- Camera target (player-centered) ---
 let targetX = player.x - width / 2;
 let targetY = player.y - height / 2 + 80;
 
