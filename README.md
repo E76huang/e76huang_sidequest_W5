@@ -1,41 +1,37 @@
-
-
 ---
-# Project Title
-
-Side Quest Week 6 — Fox Platformer with Sound & new Physics 
+# Side Quest Week 6 — Fox Platformer with Sound & Physics
 
 ---
 
 ## Description
 
-> Modified Week 6 Example 5 base code
-> Added sound effects for:
-    > Landing after a jump
-    > Attacking enemies
-    > Collecting leaves
-    > Taking damage
-> Bonus: screen shake triggers with hurt sound on damage
+- Modified Week 6 Example 5 base code
+- Added sound effects for:
+  - Landing after a jump
+  - Attacking enemies
+  - Collecting leaves
+  - Taking damage
+- Bonus: screen shake triggers with hurt sound on damage
 
 ---
 
 ## Controls
 
-> `A / ←` — Move left
-> `D / →` — Move right
-> `W / ↑` — Jump
-> `Space` — Attack
-> `R` — Restart
+- `A / ←` — Move left
+- `D / →` — Move right
+- `W / ↑` — Jump
+- `Space` — Attack
+- `R` — Restart
 
 ---
 
 ## Assets
 
-- `assets/attack.mp3` [1]
-- `assets/land.mp3` [2]
-- `assets/collect.mp3` [3]
-- `assets/jump.mp3` [4]
-- `assets/hurt.mp3` [5]
+- `assets/attack.mp3` (Pixabay, royalty-free) [1]
+- `assets/land.mp3` (Pixabay, royalty-free) [2]
+- `assets/collect.mp3` (Pixabay, royalty-free) [3]
+- `assets/jump.mp3` (Pixabay, royalty-free) [4]
+- `assets/hurt.mp3` (Pixabay, royalty-free) [5]
 
 ---
 
@@ -49,7 +45,6 @@ Side Quest Week 6 — Fox Platformer with Sound & new Physics
 
 [4] Pixabay. n.d. *Film Special Effects Cartoon Jump*. Pixabay. Retrieved from https://pixabay.com/sound-effects/film-special-effects-cartoon-jump-6462/
 
-[5] Pixabay. n.d. *Sound effects*. Pixabay. Retrieved from https://pixabay.com/sound-effects/
+[5] Pixabay. n.d. *Hurt Sound Effect*. Pixabay. Retrieved from https://pixabay.com/sound-effects/
 
 ---
-
